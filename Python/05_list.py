@@ -153,3 +153,49 @@ numbers2 = [50, 52, 53, 51]
 new_numbers = sorted(numbers2)
 new_numbers_desc = sorted(numbers2, reverse=True)
 print("7-2. sorted()", numbers2, new_numbers, new_numbers_desc)
+
+# 뒤집기
+my_numbers = [100, 101, 104, 103, 102]
+my_numbers.reverse()
+print("8-1. reverse()", my_numbers) # [102, 103, 104, 101, 100]
+
+my_numbers2 = list(reversed(my_numbers))
+print("8-2. reversed()", my_numbers2, my_numbers)
+
+# count, min, max, sum
+numbers = [1, 2, 2, 2, 2, 3, 4, 5, 6, 7]
+print("9. count()", numbers.count(2))
+print("10. min/max", min(numbers), max(numbers))
+print("11. sum", sum(numbers))
+
+# 실습3 - 기차 탑승 시뮬레이션
+train = []
+train.append("철수")
+train.append("영희")
+print("1.", train)
+
+train.extend(["민수","지훈"])
+print("2.", train)
+
+train.remove("영희")
+print("3.", train)
+
+train.insert(1,"수진")
+print("4.", train)
+
+train.remove("민수")
+train.reverse()
+print("5.", train)
+
+# 문제2 - 숫자 처리 게임
+cards = [5,3,7]
+cards.extend([4,9])
+print("1.", cards)
+
+print("2. 가장 큰 수:", max(cards))
+print("2. 가장 작은 수:", min(cards))
+
+print("3. 총합:", sum(cards))
+cards.sort()
+print("4. 제거한 숫자:", cards.pop())
+print("5.", cards)
