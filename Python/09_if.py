@@ -123,7 +123,7 @@ else:
     print(f"{second}초")
 '''
 
-
+'''
 # 중첩 조건문
 # 하나의 if문 안에 또 다른 if문을 사용하는 것
 
@@ -137,3 +137,48 @@ if username == "admin":
         print("비밀번호가 잘못됐습니다")
 else:
     print("잘못된 사용자입니다")
+''' 
+    
+# 실습 5
+# 1)
+money = int(input("금액을 넣어주세요: "))
+item = input("김밥 / 삼각김밥 / 도시락 중 골라주세요: ")
+
+# KIMBAB = "김밥"
+# SAMKIM = "삼각김밥"
+# DOSIRAK = "도시락"
+# k_price, s_price, d_price = 2500, 1500, 4000
+
+# if item == KIMBAB:
+#   if money >= k_price:
+#     print(f"{KIMBAB}을 구입했습니다")
+#   else:
+#     print("금액이 부족해요")
+# elif item == SAMKIM:
+#   if money >= s_price:
+#     print(f"{SAMKIM}을 구입했습니다")
+#   else:
+#     print("금액이 부족해요")
+# elif item == DOSIRAK:
+#   if money >= d_price:
+#     print(f"{DOSIRAK}을 구입했습니다")
+#   else:
+#     print("금액이 부족해요")
+# else:
+#   print("입력이 잘못됐습니다")
+
+
+# 2) 딕셔너리 사용
+prices = {
+  "김밥" : 2500,
+  "삼각김밥" : 1500,
+  "도시락" : 4000
+}
+
+if item in prices:
+  if money >= prices[item]:
+    print(f"{item}을 구입했습니다.")
+  else:
+    print("금액이 부족해요.")
+else:
+  print("입력이 잘못됐습니다.")
