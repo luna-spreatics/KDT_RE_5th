@@ -154,6 +154,7 @@ for i in range(1, n+1):
         
 '''
 
+'''
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>")
 # 루프 제어문
 # - 특정 조건 하에서만 작동하도록 구현
@@ -247,3 +248,43 @@ for i in range(1, n+1):
     for j in range(2 * i - 1):
         print("*", end="")
     print()
+'''
+
+
+
+
+# 리스트 컴프리헨션 
+# - for문을 리스트에 한줄로 축약하여 새 리스트를 생성하는 문법
+# - [표현식(리스트의 원소) for 변수 in 반복대상 if 조건]
+# - 표현식 : 값을 유도하는 식 (표현)
+
+# for문 이용
+squares = []
+for x in range(1,6):
+    squares.append(x ** 2)
+print(squares)
+
+# 리스트 컴프리헨션
+squares2 = [x ** 2 for x in range(1,6)]
+print(squares2)
+
+
+# 조건문 추가하기
+squares3 = [x ** 2 for x in range(1, 11) if x % 2 == 0]
+print(squares3)
+
+
+# 실습 4.
+# 문제 1.
+squares = [x**2 for x in range(1,11)]
+print(squares)
+
+# 문제 2.
+result = [x for x in range(3, 51) if x % 3 == 0]
+print(result)
+
+
+# 문제 3.
+fruits = ["apple", "fig", "banana", "plum", "cherry", "pear", "orange"]
+words = [fruit for fruit in fruits if len(fruit) >=5]
+print(words)
