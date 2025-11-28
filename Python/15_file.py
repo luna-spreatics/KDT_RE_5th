@@ -5,6 +5,7 @@
 # 파일 열기 : open()
 # open("파일 경로", mode="r", encoding="원하는 인코딩 - utf8")
 # open으로 파일을 읽으면 '파일 객체'를 반환
+'''
 import random
 f = open("example.txt", "w", encoding="utf-8")
 
@@ -175,3 +176,40 @@ if login:
     print("전화번호 저장 완료!")
 else:
     print("\n로그인 실패!")
+    
+'''   
+
+import os
+
+print(os.getcwd())
+    
+# 바이너리 파일 읽기
+with open('./Python/images/dog.jpg', 'rb') as f:
+    img = f.read()
+    print(img)
+    
+# 바이너리 파일 쓰기
+with open("./Python/images/dog_copy.jpg", "wb") as f:
+    f.write(img)
+    
+
+    
+# pickle 모듈
+# - 객체의 형태를 유지하면서 파일에 저장하고 불러올 수 있음
+
+import pickle
+
+# 리스트, 딕셔너리 파일 저장
+with open('pickle.txt', 'wb') as f:
+    li = ['dog', 'cat']
+    dic = {1:'dog', 2: 'cat'}
+    
+    pickle.dump(li, f)
+    pickle.dump(dic, f)
+    
+# 읽기
+with open('pickle.txt', 'rb') as f:
+    li = pickle.load(f)
+    dic = pickle.load(f)
+    
+    print(li, dic)
