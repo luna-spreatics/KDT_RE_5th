@@ -58,3 +58,22 @@ input:focus {
 .fruits *:not(li) {
   color: blue;
 }
+
+/* 가상 요소 선택자 */
+.box::after {
+  content: ' 목록👍';
+}
+
+.box::before {
+  content: '추천 ';
+}
+
+.box1::before {
+  content: '택시 ';
+  color: blue;
+}
+
+.box1::after {
+  content: ' 빨리!';
+  color: red;
+}
