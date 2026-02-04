@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -8,6 +7,15 @@ function App() {
 		color: 'pink',
 		fontSize: '48px',
 	};
+
+	// 실습
+	const name1 = '로이';
+	const animal = '강아지';
+
+	const a = 8;
+	const b = 5;
+
+	const title = 'Hello World';
 	return (
 		<>
 			<div className='App'>
@@ -49,7 +57,36 @@ function App() {
 					- //: jsx 외부 주석
 				*/}
 			</div>
-			<div></div>
+
+			{/* 실습 */}
+			<div>
+				{/* 실습 1번 */}
+				<div>
+					제 반려 동물의 이름은 <span className='underline'>{name1}</span>
+					입니다.
+				</div>
+				<div>
+					<span className='underline'>{name1}</span>는{' '}
+					<span className='underline'>{animal}</span>입니다.
+				</div>
+
+				{/* 실습 2번 */}
+				<div>{3 + 5 === 8 ? '정답입니다!' : '오답입니다!'}</div>
+
+				{/* 실습 3번 */}
+				{a > b && 'a가 b보다 큽니다'}
+
+				{/* 실습 4번 */}
+				<h1 className='title'>{title}</h1>
+				<div style={{ textAlign: 'center' }}>
+					<div>
+						아이디 : <input type='text' />
+					</div>
+					<div>
+						비밀번호 : <input type='text' />
+					</div>
+				</div>
+			</div>
 		</>
 	);
 }
